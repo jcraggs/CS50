@@ -1,5 +1,5 @@
 # CS50
-All work relating to the CS50 online course
+Programs written
 ------------------------------------
 
 1) cs50_pset1_change.py: python program which calculates the amount of cash change required for a purchase and tells the cashier what the most efficent set of denominations can meet the change requirement.  
