@@ -1,5 +1,5 @@
-# CS50
-Programs written
+# CS50 Introduction to Computer Science (online course)
+Programs written (coding challenges)
 ------------------------------------
 
 1) cs50_pset1_change.py: python program which calculates the amount of cash change required for a purchase and tells the cashier what the most efficent (i.e fewest coins/notes) set of denominations is in order to meet the change requirement.  
