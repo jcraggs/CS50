@@ -1,4 +1,4 @@
-# CS50 Coding Challenge
+# CS50 Coding Challenges
 Programs written 
 -----------------------
 
