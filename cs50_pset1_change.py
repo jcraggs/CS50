@@ -7,13 +7,13 @@ def main():
     rcv = change_req(cost, paid, local_crncy)
     smallest_change(rcv, local_crncy, denominations)
 
+
 def currency_denom():
     """Allows code to be edited to suit different currency denominations"""
     denominations = sorted([50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]) #edit this to change denominations
     local_crncy = "£" #edit this depending on currency
 
     return denominations, local_crncy
-
 
 
 def cost_input(local_crncy):
