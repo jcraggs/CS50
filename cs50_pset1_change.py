@@ -9,9 +9,10 @@ def main():
 
 
 def currency_denom():
-    """Allows code to be edited to suit different currency denominations"""
-    denominations = sorted([50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]) #edit this to change denominations
-    local_crncy = "£" #edit this depending on currency
+    """Place for code to be edited to suit different currency denominations"""
+    denominations = sorted([50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]) #edit this to change avaliable denominations
+    local_crncy = "£" #edit this depending on the local currency symbol
+    denominations.reverse()
 
     return denominations, local_crncy
 
@@ -22,7 +23,7 @@ def cost_input(local_crncy):
         try:
             cost = float(input(
                 "How much does the item cost (enter value as a number with decimals i.e 3.99 for "+ local_crncy +"3.99)?: "))
-            if cost < 0 or cost == 0:
+            if cost <= 0:
                 print("Error_1: Cost must be entered as a number greater than 0 \n")
             if cost > 0:
                 break
@@ -40,7 +41,7 @@ def paid_input(cost, local_crncy):
                 "How much has the customer paid (enter value as a number with decimals i.e 3.99 for "+ local_crncy+ "3.99)?: "))
             if paid < cost:
                 print("Error_1: Payment must be greater than the cost of the item \n")
-            if paid > cost or paid == cost:
+            if paid >= cost:
                 break
         except ValueError:
             print("Error_2: Payment must be entered as a number \n")
@@ -65,15 +66,13 @@ def smallest_change(rcv, local_crncy, denominations):
     """Calculating and displaying the fewest denominations required to give the customer their change"""
     print("\nYou need to give the customer the following change denominations: \n")
 
-    denominations.reverse()
-
     while rcv > 0:
-        for i in denominations:
-            if i <= rcv:
-                divid_change = rcv/i
+        for denom_val in denominations:
+            if denom_val <= rcv:
+                divid_change = rcv/denom_val
                 whole_change = int(divid_change)
-                print("- " + local_crncy + str(i) + " x " + str(whole_change))
-                rcv = round(((divid_change-whole_change)*i), 2)
+                print("- " + local_crncy + str(denom_val) + " x " + str(whole_change))
+                rcv = round(((divid_change-whole_change)*denom_val), 2)
 
 
 if __name__ == "__main__":
