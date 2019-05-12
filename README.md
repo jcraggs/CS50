@@ -1,5 +1,6 @@
-# CS50 Coding Challenges
-Programs written
+# Python-Coding-Challenges
+
+CS50 Coding Challenges
 -----------------------
 
 1) cs50_pset1_change.py: python program which calculates the amount of cash change required for a purchase and tells the cashier what the most efficent (i.e fewest coins/notes) set of denominations is in order to meet the change requirement.
